@@ -1,0 +1,105 @@
+id
+id
+False    21613
+Name: count, dtype: int64
+
+date
+date
+False    21613
+Name: count, dtype: int64
+
+price
+price
+False    21613
+Name: count, dtype: int64
+
+bedrooms
+bedrooms
+False    21613
+Name: count, dtype: int64
+
+bathrooms
+bathrooms
+False    21613
+Name: count, dtype: int64
+
+sqft_living
+sqft_living
+False    21613
+Name: count, dtype: int64
+
+sqft_lot
+sqft_lot
+False    21613
+Name: count, dtype: int64
+
+floors
+floors
+False    21613
+Name: count, dtype: int64
+
+waterfront
+waterfront
+False    21613
+Name: count, dtype: int64
+
+view
+view
+False    21613
+Name: count, dtype: int64
+
+condition
+condition
+False    21613
+Name: count, dtype: int64
+
+grade
+grade
+False    21613
+Name: count, dtype: int64
+
+sqft_above
+sqft_above
+False    21613
+Name: count, dtype: int64
+
+sqft_basement
+sqft_basement
+False    21613
+Name: count, dtype: int64
+
+yr_built
+yr_built
+False    21613
+Name: count, dtype: int64
+
+yr_renovated
+yr_renovated
+False    21613
+Name: count, dtype: int64
+
+zipcode
+zipcode
+False    21613
+Name: count, dtype: int64
+
+lat
+lat
+False    21613
+Name: count, dtype: int64
+
+long
+long
+False    21613
+Name: count, dtype: int64
+
+sqft_living15
+sqft_living15
+False    21613
+Name: count, dtype: int64
+
+sqft_lot15
+sqft_lot15
+False    21613
+Name: count, dtype: int64
+
