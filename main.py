@@ -2,10 +2,14 @@
 import pandas as pd
 import numpy as np
 import sys
+import matplotlib.pyplot as plt
 
-orig_stdout = sys.stdout
-f = open('output.txt', 'w')
-sys.stdout = f
+#send to output.txt
+# orig_stdout = sys.stdout
+# f = open('output.txt', 'w')
+# sys.stdout = f
+# ##
+
 
 
 
@@ -14,17 +18,37 @@ df = pd.read_csv(file_path, header=None)
 headers = ['id','date','price','bedrooms','bathrooms','sqft_living','sqft_lot','floors','waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15']
 df.columns = headers
 
-# print(df.head(5))
-
-# print(df[['price','bedrooms']].describe())
 
 df.replace("?", np.nan, inplace=True)
-missing_data = df.isnull()
-# print(missing_data.head(5))
 
-for column in missing_data.columns.values.tolist():
-    print(column)
-    print (missing_data[column].value_counts())
-    print("")    
-sys.stdout = orig_stdout
-f.close()
+#variables to bin -->
+# sqfeetliving, lot, above, basement 
+# print(df['price'])
+
+bins = np.linspace(min(df["sqft_living"]), max(df["sqft_living"]), 4)
+
+group_names = ['Low', 'Medium', 'High']
+
+df['sqft_living-binned'] = pd.cut(df['sqft_living'], bins, labels=group_names, include_lowest=True )
+values = df['sqft_living-binned'].value_counts() 
+
+fig = plt.figure(figsize = (10, 5))
+plt.bar(group_names, values)
+
+
+
+#send to output.txt   
+# sys.stdout = orig_stdout
+# f.close()
+
+
+
+
+# import matplotlib.pyplot as plt
+# height = [189, 185, 195, 149, 189, 147, 154, 
+#           174, 169, 195, 159, 192, 155, 191, 
+#           153, 157, 140, 144, 172, 157, 181, 
+#           182, 166, 167]
+  
+# plt.hist(height, edgecolor="red", bins=5)
+# plt.show()
